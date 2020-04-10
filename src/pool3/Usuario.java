@@ -1,6 +1,6 @@
 package pool3;
 
-public class Usuario {
+public class User {
 	public String nome;
 	public String telefone;
 	public String endereço;
