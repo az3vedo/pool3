@@ -8,7 +8,7 @@ class Report {
 
 	@Test
 	void test() {
-//		Report report = new Report();
+		Report report = new Report();
 	}
 
 }
