@@ -4,15 +4,13 @@ import java.util.Date;
 public class Cash {
 	private Date date;
 	private String name;
-	private float amount;
+	private Double amount;
 	private String type; // there are 2 types, "outgoing" and "income"
 	
+public Cash(Date date, String name, String type, Double amount) {
 	
-	
-	
-public Cash(Date date, String id_name, String type, float amount) {
 		this.date = date;
-		this.name = id_name;
+		this.name = name;
 		this.type = type;
 		if (type == "outgoing") {
 			this.amount = amount*(-1);
@@ -38,11 +36,11 @@ public Cash(Date date, String id_name, String type, float amount) {
 		this.name = id_name;
 	}
 	
-	public float getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
 	
-	public void setAmount(float amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 	
@@ -52,5 +50,10 @@ public Cash(Date date, String id_name, String type, float amount) {
 	
 	public void setType(String type) {
 		this.type = type;
+	}
+	
+	@Override
+	public String toString() {
+		return new String("ID: "+ this.getName() +"\n"+ "Valor: "+ this.getAmount() + "\n");
 	}
 }

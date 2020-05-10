@@ -6,13 +6,13 @@ public class Report {
 	private String period;
 	private LocalDate startDate;
 	private LocalDate endDate;
-//	private HashMap<String, Float> entradas = new HashMap<String, Float>();
+	private Double balance;
 	
 	public Report(String startDate, String endDate) {
 		this.startDate = LocalDate.parse(startDate);
 		this.endDate = LocalDate.parse(endDate);
 		this.period = (startDate + " - " + endDate);
-		
+		this.balance = 0.0; 
 		
 	}
 	
@@ -38,6 +38,18 @@ public class Report {
 
 	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
+	}
+
+	public Double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(Double balance ) {
+		this.balance = balance;
+	}
+	
+	public void addBalance(Double value) {
+		this.balance += value;
 	}
 	
 }
