@@ -1,9 +1,9 @@
 package pool3;
 
-import pool3.Cash;
 import java.util.*;
 
 public class Main {
+
 	
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -20,7 +20,6 @@ public class Main {
 		login.add(l);
 		}
 	public void checkLogin() {
-		
 	}
-
+		
 }
