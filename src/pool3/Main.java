@@ -14,11 +14,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		Cash cash = new Cash(dateParser("08-05-2020"), "conta de luz", "outgoing", 300.0);
-		ArrayList<Cash> money = new ArrayList<Cash>();
-		money.add(cash);
 		
-		System.out.println(cash.getDate());
 	}
 	
 	private static Date dateParser(String date_string) {
