@@ -12,7 +12,7 @@ public class Report {
 		this.startDate = LocalDate.parse(startDate);
 		this.endDate = LocalDate.parse(endDate);
 		this.period = (startDate + " - " + endDate);
-		this.balance = 0.0; 
+		
 		
 	}
 	
@@ -44,12 +44,12 @@ public class Report {
 		return balance;
 	}
 
-	public void setBalance(Double balance ) {
+	public void setBalance(Double balance) {
 		this.balance = balance;
 	}
-	
-	public void addBalance(Double value) {
-		this.balance += value;
+
+	public void addBalance(Double amount) {
+		this.balance+= amount;
 	}
 	
 }

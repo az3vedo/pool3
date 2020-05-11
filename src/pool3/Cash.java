@@ -7,10 +7,12 @@ public class Cash {
 	private Double amount;
 	private String type; // there are 2 types, "outgoing" and "income"
 	
-public Cash(Date date, String name, String type, Double amount) {
 	
+	
+	
+public Cash(Date date, String id_name, String type, Double amount) {
 		this.date = date;
-		this.name = name;
+		this.name = id_name;
 		this.type = type;
 		if (type == "outgoing") {
 			this.amount = amount*(-1);
@@ -50,10 +52,5 @@ public Cash(Date date, String name, String type, Double amount) {
 	
 	public void setType(String type) {
 		this.type = type;
-	}
-	
-	@Override
-	public String toString() {
-		return new String("ID: "+ this.getName() +"\n"+ "Valor: "+ this.getAmount() + "\n");
 	}
 }
