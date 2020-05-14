@@ -9,10 +9,7 @@ public class Main {
 
 	
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		ArrayList<Login> login = new ArrayList<Login>();  
-		addUser(scan, login);
-		System.out.println(login.get(0).getUser());
+		
 	}
 	public static void addUser(Scanner scan, ArrayList<Login> login) {
 		System.out.print("\n User: ");
@@ -22,13 +19,18 @@ public class Main {
 		Login l = new Login(user, password);
 		login.add(l);
 		}
+	
 	public void checkLogin() {
 	}
-	public Report gerarRelatorio(String start, String end, ArrayList<Cash> list) {
-		Report newReport = new Report(start,end);
-		for (Cash item : list) {
-			newReport.addBalance(item.getAmount());
-		}
+	public static Report createReport(String start, String end, ArrayList<Cash> list) {
+		Report newReport = null;
+				try {
+					newReport = new Report(start,end);
+					for (Cash item : list) {
+					  Double amount = item.getAmount();
+						newReport.addBalance(amount);
+					}
+				} catch (NullPointerException e) {e.printStackTrace();}
 		return newReport;
 	}
 	
@@ -43,5 +45,15 @@ public class Main {
 		return date;
 	}
 	
+	public static boolean checkLogin(ArrayList<Login> login) {
+    Login p = new  Login("Ale123", "123");
+    for(Login l : login) {
+        if(l.equals(p)) {
+            return true;
+        } else continue;
+
+    }
+    return false;
+}
 	
 }
